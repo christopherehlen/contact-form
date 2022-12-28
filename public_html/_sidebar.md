@@ -1,4 +1,4 @@
-* [About](README.md)
+* [About](about.md)
 * [Getting Started](getting-started.md)
 * [Cloudflare Deployment](cloudflare.md)
 * [Configuration](configuration.md)

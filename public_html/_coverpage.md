@@ -9,4 +9,4 @@
 - Zero cost for most sites
 
 [GitHub](https://github.com/christopherehlen)
-[Get Started](README.md)
+[Get Started](about.md)

@@ -85,7 +85,8 @@ const onSendSuccessful = {
         let state = response.state = new FormState();
         state.ready = true;
         state.sendSuccessful = true;
-        state.showAlert = request.showAlert;
+        state.showAlert = request.state.showAlert;
+        state.databaseId = request.state.databaseId;
         response.model = new FormModel(state);
     }
 };

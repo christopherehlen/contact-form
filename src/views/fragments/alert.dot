@@ -1,0 +1,11 @@
+{{
+    import { cancel_webp, checked_webp } from '#generated/assets';
+}}
+
+<div class="alert {{? it.showSuccessAlert }}success{{?}} {{? it.showFailureAlert }}fail{{?}}">
+    <div class="overlay"></div>
+    <div class="message">
+        {{? it.showSuccessAlert }}<img src="{{= checked_webp }}">Message successfully sent.{{?}}
+        {{? it.showFailureAlert }}<img src="{{= cancel_webp }}">Unable to send message at this time.{{?}}
+    </div>
+</div>

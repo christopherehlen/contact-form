@@ -1,0 +1,134 @@
+.contact-form {
+
+    img {
+        width: 1em;
+        height: 1em;
+        padding-right: 0.5em;
+        vertical-align: middle
+    }
+
+    label {
+        font-family: var(--label-font-family);
+        font-size: 0.75em;
+        font-weight: bold;
+        color: var(--label-font-Color);
+    }
+
+    input[type="text"],
+    textarea {
+        display: block;
+        width: calc(100% - (2 * 0.125em) - (2 * 00.5em));
+        margin-bottom: 0.5em;
+        padding: 0.5em;
+        border-width: 0.125em;
+        border-radius: 0.5em;
+        border-color: var(--input-color);
+        border-style: solid;
+        font-family: var(--input-font-family);
+        font-size: 1.05em;
+        color: var(--input-color);
+    }
+
+    button {
+        display: block;
+        background-color: var(--send-bg-color);
+        width: calc(100% - 2em);
+        margin: auto;
+        margin-top: 1em;
+        border-radius: 0.5em;
+        padding: 0.6em;
+        font-family: var(--send-font-family);
+        font-size: 1.05em;
+        font-weight: bold;
+        color: var(--send-font-color);
+        cursor: pointer;
+    }
+
+    .alert {
+        position: relative;
+        visibility: hidden;
+        background-color: white;
+        width: 100%;
+        height: 2.5em;
+        margin-bottom: 1em;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 5px;
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 2.5em;
+            opacity: 0.25;
+        }
+
+        .message {
+            width: calc(100% - 2em);
+            padding-top: 0.5em;
+            padding-right: 1em;
+            padding-bottom: 0.5em;
+            padding-left: 1em;
+            font-family: var(--alert-font-family);
+            font-size: 1.05em;
+            font-weight: bold;
+        }
+    }
+
+    .alert.success {
+        visibility: visible;
+        border-color: var(--alert-success-color);
+
+        .overlay {
+            background-color: var(--alert-success-color);
+        }
+
+        .message {
+            color: var(--alert-success-color);
+        }
+    }
+
+    .alert.fail {
+        visibility: visible;
+        border-color: var(--alert-fail-color);
+
+        .overlay {
+            background-color: var(--alert-fail-color);
+        }
+
+        .message {
+            color: var(--alert-fail-color);
+        }
+    }
+
+    .form-field-error {
+        visibility: hidden;
+        font-family: var(--invalid-font-family);
+        font-size: 0.75em;
+        font-weight: bold;
+        text-align: right;
+        color: var(--invalid-color);
+    }
+
+    .invalid {
+
+        label {
+            color: var(--invalid-color);
+        }
+
+        input[type="text"],
+        textarea {
+            border-color: var(--invalid-color);
+            color: var(--invalid-color);
+        }
+
+        .form-field-error {
+            visibility: visible;
+        }
+    }
+
+    button:disabled,
+    button[disabled] {
+        cursor: progress;
+        filter: opacity(0.3);
+    }
+}

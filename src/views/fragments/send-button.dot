@@ -1,0 +1,7 @@
+{{
+    import { clickEvent } from '#src/helpers/events';
+}}
+
+<div>
+    <button type="button" {{? it.disabled }}disabled="true"{{?}} data-organism-events='[{{= clickEvent() }}]'>Send</button>
+</div>

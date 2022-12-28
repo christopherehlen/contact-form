@@ -1,0 +1,13 @@
+{{
+    import { changeEvent } from '#src/helpers/events';
+}}
+
+<div {{? it.invalid }}class="invalid"{{?}}>
+    <label>
+        Message
+    </label>
+    <textarea rows="5" maxlength="250" {{? it.disabled }}disabled="true"{{?}} data-organism-events='[{{= changeEvent("message") }}]' autocomplete="off">{{= it.message }}</textarea>
+    <div class="form-field-error">
+        {{= it.errorMessage }}
+    </div>
+</div>

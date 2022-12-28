@@ -1,0 +1,19 @@
+{{
+    import ALERT from '#generated/views/fragments/alert';
+    import SUBJECT_FIELD from '#generated/views/fragments/subject-field';
+    import NAME_FIELD from '#generated/views/fragments/name-field';
+    import EMAIL_FIELD from '#generated/views/fragments/email-field';
+    import MESSAGE_FIELD from '#generated/views/fragments/message-field';
+    import SEND_BUTTON from '#generated/views/fragments/send-button';
+}}
+
+<div class="contact-form">
+    {{? it.showAlert }}{{= ALERT(it.alert(), env) }}{{?}}
+    <form autocomplete="off">
+        {{= SUBJECT_FIELD(it.subjectField(), env) }}
+        {{= NAME_FIELD(it.nameField(), env) }}
+        {{= EMAIL_FIELD(it.emailField(), env) }}
+        {{= MESSAGE_FIELD(it.messageField(), env) }}
+        {{= SEND_BUTTON(it.sendButton(), env) }}
+    </form>
+</div>

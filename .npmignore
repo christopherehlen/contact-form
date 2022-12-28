@@ -1,0 +1,11 @@
+cloudflare/
+generated/
+public_html/
+src/
+.DS_Store
+.env
+.env.local
+.env.prod
+.gitattributes
+.gitignore
+index.js

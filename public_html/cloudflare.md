@@ -101,10 +101,12 @@
 ![Environment Variables](./images/a81dd30b-2318-4930-8aaa-86f9ec7ef000.webp "Environment Variables")
 
 5. Add the following environment variables.
+    - Set **NODE_VERSION** to 16.13.1.
     - Set **CLOUDFLARE_ACCOUNT_ID** to the **Account ID** saved in **Create Worker Subdomain** section **Step 4**.
     - Set **CLOUDFLARE_API_TOKEN** to the **API Token** saved in **Create API Token** section **Step 4**.
-    - Set **SYS_BASE_URL** to the **Domain Name** saved in **Setup Build** section **Step 1**.
-    - Set **SYS_BASE_API_URL** to the **Worker Subdomain** with a **contact-form** prefix saved in **Create Worker Subdomain** section **Step** 4, i.e., ***contact-form.blue-squirrel.workers.com***.
+    - Set **SYS_ALLOW_ORIGIN** to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ***https://contact-form43i.pages.dev***.
+    - Set **SYS_BASE_URL** to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ***https://contact-form43i.pages.dev***.
+    - Set **SYS_BASE_API_URL** to the **Worker Subdomain** with a **contact-form** prefix saved in **Create Worker Subdomain** section **Step** 4, i.e., ***https://contact-form.blue-squirrel.workers.dev***.
     - Set **SYS_NOTION_TOKEN** to the **API Token** saved in **Generate a Notion Integration Token** section **Step 7**.
     - Set **SYS_PAGE_NAME** to the **Name** saved in **Create a Notion Page** section **Step 3**.
 

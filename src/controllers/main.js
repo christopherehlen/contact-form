@@ -107,9 +107,15 @@ const onSendFailure = {
 const onClearForm = {
     eventType: 'onClearForm',
     listener: (request, response, env) => {
-        let state = response.state = new FormState();
-        state.databaseId = request.event.databaseId;
-        state.ready = true;
+        let state = response.state;
+        state.subject = '';
+        state.name = '';
+        state.email = '';
+        state.message = '';
+        state.sendSuccessful = false;
+        state.sendFailed = false;
+        state.sendInProgress = false;
+        state.sendAttempts = 0;
         response.model = new FormModel(state);
     }
 };

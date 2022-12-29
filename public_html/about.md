@@ -14,3 +14,11 @@
     The **Contact Form** after a failed send message attempt.
 - ### <a href="/organisms/contact-form.html?width=30pct&state=disabled" target="demo">Disabled Form</a>
     The **Contact Form** in a  disabled state, this occures when the form is first loading or while a send message is in progress.
+
+### User Flow
+
+- ### <a href="/organisms/contact-form.html?width=30pct&emit=happyPath" target="demo">Happy Path</a>
+    The **Contact Form** in a successful user flow.
+
+- ### <a href="/organisms/contact-form.html?width=30pct&emit=sadPath" target="demo">Sad Path</a>
+    The **Contact Form** in a unsuccessful user flow.

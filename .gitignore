@@ -1,9 +1,9 @@
-cloudflare/
-dist/
-generated/
-node_modules/
-public_html/organisms
-public_html/scripts/organism.js
+/cloudflare/
+/dist/
+/generated/
+/node_modules/
+/public_html/organisms
+/public_html/scripts/organism.js
 .DS_Store
 .env.local
 package-lock.json

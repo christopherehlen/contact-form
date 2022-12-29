@@ -19,11 +19,22 @@
 
 3. If prompted, set the account's worker subdomain.
 
-![New Subdomain](./images/fccbcd45-7106-4657-1c48-ca60afd80a00.webp "New Subdomain")
+![New Subdomain](./images/017f79cd-3b23-45c3-ec46-48621a571e00.webp "New Subdomain")
 
-4. Your **Subdomain** and **Account ID** are in the right pane. Save both the **Subdomain** and **Account ID** somewhere; you will need them to set the **Contact Form's** environment variables later.
+4. If prompted, verify email account.
 
-![Api Tokens](./images/a4691f04-dbe7-4380-2a0b-6414b656c400.webp "Api Tokens")
+![Verify Email](./images/2f230bbc-3559-40cc-e4dc-125bbe18f400.webp "Verify Email")
+
+![Verified](./images/7636ce3b-6d41-459f-cc87-a18ddc335f00.webp "Verified")
+
+5. Once verified, click back to My Profile.
+
+![My Profile](./images/1bf60bfd-0ae9-4fee-b1d4-ad364b539c00.webp "Verified")
+
+
+6. Your **Subdomain** and **Account ID** are in the right pane. Save both the **Subdomain** and **Account ID** somewhere; you will need them to set the **Contact Form's** environment variables later.
+
+![Account ID](./images/a4691f04-dbe7-4380-2a0b-6414b656c400.webp "Account ID")
 
 
 ## Create API Token
@@ -80,10 +91,13 @@
 
 ![Connect GitHub](./images/fb710868-3e16-4a5b-06a9-ba1622c8de00.webp "Connect GitHub")
 
-7. Select **contact-form** option and click **Begin setup** button.
+7. Select **contact-form** optionn.
 
-![Select Contact Form](./images/76c2089d-c67c-4199-5fb7-4c2573d58d00.webp "Select Contact Form")
+![Select Contact Form](./images/63664928-d621-4adc-32ec-791043629200.webp "Select Contact Form")
 
+8. Click the **Begin setup** button.
+
+![Begin setup](./images/14bdff36-e776-480d-644c-b91e2c045d00.webp "Begin setup")
 
 ## Setup Build
 
@@ -113,3 +127,5 @@
 5. Click the **Save and Deploy** button.
 
 ![Save and Deploy](./images/968a1abb-18eb-4cf9-581d-9cb22a55ef00.webp "Save and Deploy")
+
+6. Once successfully deployed, navigate to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ***https://contact-form43i.pages.dev***.

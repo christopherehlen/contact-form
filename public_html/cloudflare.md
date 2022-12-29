@@ -27,12 +27,7 @@
 
 ![Verified](./images/7636ce3b-6d41-459f-cc87-a18ddc335f00.webp "Verified")
 
-5. Once verified, click back to My Profile.
-
-![My Profile](./images/1bf60bfd-0ae9-4fee-b1d4-ad364b539c00.webp "Verified")
-
-
-6. Your **Subdomain** and **Account ID** are in the right pane. Save both the **Subdomain** and **Account ID** somewhere; you will need them to set the **Contact Form's** environment variables later.
+5. Your **Subdomain** and **Account ID** are in the right pane. Save both the **Subdomain** and **Account ID** somewhere; you will need them to set the **Contact Form's** environment variables later.
 
 ![Account ID](./images/a4691f04-dbe7-4380-2a0b-6414b656c400.webp "Account ID")
 
@@ -64,6 +59,10 @@
 4. Click the **Copy** button. Save the token somewhere; you will need it to set the **Contact Form's** environment variables later. **IMPORTANT!** this is the only time the API token will be visible to you; if you lose the token, you must create a new one.
 
 ![Copy Token](./images/813d6f95-7ac9-4fcf-337e-33048efc3400.webp "Copy Token")
+
+5. Click back to My Profile.
+
+![My Profile](./images/1bf60bfd-0ae9-4fee-b1d4-ad364b539c00.webp "Verified")
 
 ## Connect to GitHub
 

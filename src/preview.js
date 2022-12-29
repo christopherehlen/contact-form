@@ -40,8 +40,8 @@ let source = {
   };
 
 let happyPath = new EmitSequence();
-happyPath.initialDelay = 3000;
-happyPath.repeatDelay = 3000;
+happyPath.initialDelay = 1500;
+happyPath.repeatDelay = 1500;
 
 let sequenceEvent = new SequenceEvent();
 sequenceEvent.eventType = onFormChangeEventType;
@@ -50,7 +50,7 @@ sequenceEvent.event = {
     fieldName: "subject",
     value: "Can we get on a call next week?"
   };
-sequenceEvent.delay = 2500;
+sequenceEvent.delay = 1500
 happyPath.events.push(sequenceEvent);
 
 sequenceEvent = new SequenceEvent();
@@ -60,7 +60,7 @@ sequenceEvent.event = {
     fieldName: "name",
     value: "Wile E. Coyote"
   };
-sequenceEvent.delay = 2500;
+sequenceEvent.delay = 1500
 happyPath.events.push(sequenceEvent);
 
 sequenceEvent = new SequenceEvent();
@@ -70,7 +70,7 @@ sequenceEvent.event = {
     fieldName: "email",
     value: "email@coyote.com"
   };
-sequenceEvent.delay = 2500;
+sequenceEvent.delay = 1500
 happyPath.events.push(sequenceEvent);
 
 sequenceEvent = new SequenceEvent();
@@ -80,19 +80,19 @@ sequenceEvent.event = {
     fieldName: "message",
     value: "I am interested in buying the anvil I saw in  ACME Catalog. I want to discuss availability and price."
   };
-sequenceEvent.delay = 2500;
+sequenceEvent.delay = 1500
 happyPath.events.push(sequenceEvent);
 
 sequenceEvent = new SequenceEvent();
 sequenceEvent.eventType = onSendEventType;
 sequenceEvent.source = source;
 sequenceEvent.event = {};
-sequenceEvent.delay = 2500;
+sequenceEvent.delay = 1500
 happyPath.events.push(sequenceEvent);
 
 let sadPath = new EmitSequence();
-sadPath.initialDelay = 3000;
-sadPath.repeatDelay = 500;
+sadPath.initialDelay = 1500;
+sadPath.repeatDelay = 1500;
 
 sequenceEvent = new SequenceEvent();
 sequenceEvent.eventType = onFormChangeEventType;
@@ -101,7 +101,7 @@ sequenceEvent.event = {
     fieldName: "subject",
     value: "Can we get on a call next week?"
   };
-sequenceEvent.delay = 2500;
+sequenceEvent.delay = 1500
 sadPath.events.push(sequenceEvent);
 
 sequenceEvent = new SequenceEvent();
@@ -111,7 +111,7 @@ sequenceEvent.event = {
     fieldName: "name",
     value: "Wile E. Coyote"
   };
-sequenceEvent.delay = 2500;
+sequenceEvent.delay = 1500
 sadPath.events.push(sequenceEvent);
 
 sequenceEvent = new SequenceEvent();
@@ -121,7 +121,7 @@ sequenceEvent.event = {
     fieldName: "email",
     value: "email@coyote.com"
   };
-sequenceEvent.delay = 2500;
+sequenceEvent.delay = 1500
 sadPath.events.push(sequenceEvent);
 
 sequenceEvent = new SequenceEvent();
@@ -131,21 +131,21 @@ sequenceEvent.event = {
     fieldName: "message",
     value: "I am interested in buying the anvil I saw in  ACME Catalog. I want to discuss availability and price.\n\nThis message is going to fail."
   };
-sequenceEvent.delay = 2500;
+sequenceEvent.delay = 1500
 sadPath.events.push(sequenceEvent);
 
 sequenceEvent = new SequenceEvent();
 sequenceEvent.eventType = onSendEventType;
 sequenceEvent.source = source;
 sequenceEvent.event = {};
-sequenceEvent.delay = 4000;
+sequenceEvent.delay = 2500
 sadPath.events.push(sequenceEvent);
 
 sequenceEvent = new SequenceEvent();
 sequenceEvent.eventType = clearFormEventType;
 sequenceEvent.source = source;
 sequenceEvent.event = {};
-sequenceEvent.delay = 500;
+sequenceEvent.delay = 1500
 sadPath.events.push(sequenceEvent);
 
 export default {

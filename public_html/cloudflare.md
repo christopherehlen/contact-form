@@ -1,7 +1,7 @@
 ## Fork Contact Form
 
 1. Log in to <a href="https://www.github.com/" target="_blank">**GitHub**</a>.
-2. Navigate to <a href="https://github.com/christopherehlen/contact-from" target="_blank">**github.com/christopherehlen/contact-from**</a> repository.
+2. Navigate to <a href="https://github.com/christopherehlen/contact-form" target="_blank">**github.com/christopherehlen/contact-form**</a> repository.
 2. In the upper right corner, click the **Fork** button.
 
 ![Fork](./images/9e0e3fd4-4ceb-4088-b492-72ff5ca25a00.webp "Fork")

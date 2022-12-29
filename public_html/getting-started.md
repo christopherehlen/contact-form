@@ -25,7 +25,7 @@
 
 ![New Integration](./images/ab4c40e5-d73f-49af-bc23-60387feac100.webp "New Integration")
 
-6. Type the name of the new integration and click the **Save** button.
+6. Type the name of the new integration and click the **Submit** button.
 
 ![Integration Form](./images/eea76daf-4967-438d-458b-c37131c7ec00.webp "Integration Form")
 
@@ -126,14 +126,13 @@ npm run worker
 npm run http
 ```
 
-8. In browser goto ***http://localhost:8080/organisms/contact-form.html?width=30pct***.
-
-![Contact Form](./images/446a5443-3400-4f4d-e4bf-4be37a415500.webp "Contact Form")
-
-### IMPORTANT!
+### IMPORTANT READ BEFORE CONTINUING ON TO STEP 8!
 
 The **Contact Form** database will be created the first time a **Contact Form** is rendered; this will take 15-60 seconds, and during this time, the form will be disabled. Wait to reload the page until this process has completed.
 
+8. In browser goto ***http://localhost:8080/organisms/contact-form.html?width=30pct***.
+
+![Contact Form](./images/446a5443-3400-4f4d-e4bf-4be37a415500.webp "Contact Form")
 
 ## Using Contact Form
 

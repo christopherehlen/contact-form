@@ -82,11 +82,14 @@ const _onSend = {
 const onSendSuccessful = {
     eventType: 'onSendSuccessful',
     listener: (request, response, env) => {
-        let state = response.state = new FormState();
-        state.ready = true;
+        let state = response.state;
+        state.subject = '';
+        state.name = '';
+        state.email = '';
+        state.message = '';
         state.sendSuccessful = true;
-        state.showAlert = request.state.showAlert;
-        state.databaseId = request.state.databaseId;
+        state.sendInProgress = false;
+        state.sendAttempts = 0;
         response.model = new FormModel(state);
     }
 };

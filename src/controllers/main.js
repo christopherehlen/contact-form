@@ -17,7 +17,7 @@ const _postInitialize = {
     listener: (request, response, env) => {
         let asyncEmitEvent = response.emitEvent;
         (new GetDatabase(env)).call().then((httpResponse) => {
-            if (httpResponse.data.successful && httpResponse.data) {
+            if (httpResponse.data && httpResponse.data.successful) {
                 asyncEmitEvent('_onReady', { databaseId: httpResponse.data.objectId });
             }
         });
@@ -66,7 +66,7 @@ const _onSend = {
                 email: state.email,
                 content: state.message
             }).then((httpResponse) => {
-                if (httpResponse.data.successful && httpResponse.data) {
+                if (httpResponse.data && httpResponse.data.successful) {
                     asyncEmitEvent('onSendSuccessful', {});
                 } else {
                     asyncEmitEvent('onSendFailure', {});

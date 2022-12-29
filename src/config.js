@@ -13,7 +13,8 @@ export default {
                 "_onFormChange",
                 "_onSend",
                 "onSendSuccessful",
-                "onSendFailure"
+                "onSendFailure",
+                "onClearForm"
             ],
             "stateless": []
         }

@@ -101,4 +101,14 @@ const onSendFailure = {
     }
 };
 
-export { _initialize, _postInitialize, _onReady, _onFormChange, _onSend, onSendSuccessful, onSendFailure }
+const onClearForm = {
+    eventType: 'onClearForm',
+    listener: (request, response, env) => {
+        let state = response.state = new FormState();
+        state.databaseId = request.event.databaseId;
+        state.ready = true;
+        response.model = new FormModel(state);
+    }
+};
+
+export { _initialize, _postInitialize, _onReady, _onFormChange, _onSend, onSendSuccessful, onSendFailure, onClearForm }

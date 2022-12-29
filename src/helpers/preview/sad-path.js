@@ -2,7 +2,7 @@ import { EmitSequence, SequenceEvent } from '@christopherehlen/atomic/utility';
 
 let onFormChangeEventType = "christopherehlen.com/organisms/contact-form#_onFormChange";
 let onSendEventType = "christopherehlen.com/organisms/contact-form#_onSend";
-let clearFormEventType = "christopherehlen.com/organisms/contact-form#clearForm";
+let clearFormEventType = "christopherehlen.com/organisms/contact-form#onClearForm";
 
 let source = {
     id: "contact-form",

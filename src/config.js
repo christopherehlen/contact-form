@@ -12,9 +12,9 @@ export default {
                 "_onReady",
                 "_onFormChange",
                 "_onSend",
-                "clearForm",
                 "onSendSuccessful",
-                "onSendFailure"
+                "onSendFailure",
+                "onClearForm"
             ],
             "stateless": []
         }

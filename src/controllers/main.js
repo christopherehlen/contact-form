@@ -24,16 +24,6 @@ const _postInitialize = {
     }
 };
 
-const clearForm = {
-    eventType: 'clearForm',
-    listener: (request, response, env) => {
-        let state = response.state = new FormState();
-        state.databaseId = request.event.databaseId;
-        state.ready = true;
-        response.model = new FormModel(state);
-    }
-};
-
 const _onReady = {
     eventType: '_onReady',
     listener: (request, response, env) => {
@@ -111,4 +101,14 @@ const onSendFailure = {
     }
 };
 
-export { _initialize, _postInitialize, _onReady, _onFormChange, _onSend, clearForm, onSendSuccessful, onSendFailure }
+const onClearForm = {
+    eventType: 'onClearForm',
+    listener: (request, response, env) => {
+        let state = response.state = new FormState();
+        state.databaseId = request.event.databaseId;
+        state.ready = true;
+        response.model = new FormModel(state);
+    }
+};
+
+export { _initialize, _postInitialize, _onReady, _onFormChange, _onSend, onSendSuccessful, onSendFailure, onClearForm }

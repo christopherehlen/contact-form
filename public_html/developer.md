@@ -159,7 +159,7 @@ function render(elementId, widget, options) {...}
 {}
 ```
 
-**onSendFailure:** event is emits when a contact form message send failss.
+**onSendFailure:** event emits when a contact form message send failss.
 
 ```js
 {}

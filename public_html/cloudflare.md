@@ -121,9 +121,9 @@
     - Set **NODE_VERSION** to 16.13.1.
     - Set **CLOUDFLARE_ACCOUNT_ID** to the **Account ID** saved in **Create Worker Subdomain** section **Step 6**.
     - Set **CLOUDFLARE_API_TOKEN** to the **API Token** saved in **Create API Token** section **Step 6**.
-    - Set **SYS_ALLOW_ORIGIN** to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ***https://contact-form-43i.pages.dev***.
-    - Set **SYS_BASE_URL** to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ***https://contact-form-43i.pages.dev***.
-    - Set **SYS_BASE_API_URL** to the **Worker Subdomain** with a **contact-form** prefix saved in **Create Worker Subdomain** section **Step** 4, i.e., ***https://contact-form.blue-squirrel.workers.dev***.
+    - Set **SYS_ALLOW_ORIGIN** to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ```https://contact-form-43i.pages.dev```
+    - Set **SYS_BASE_URL** to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ```https://contact-form-43i.pages.dev```
+    - Set **SYS_BASE_API_URL** to the **Worker Subdomain** with a **contact-form** prefix saved in **Create Worker Subdomain** section **Step** 4, i.e., ```https://contact-form.blue-squirrel.workers.dev```
     - Set **SYS_NOTION_TOKEN** to the **API Token** saved in **Generate a Notion Integration Token** section **Step 7**.
     - Set **SYS_PAGE_NAME** to the **Name** saved in **Create a Notion Page** section **Step 3**.
 
@@ -131,4 +131,4 @@
 
 ![Save and Deploy](./images/968a1abb-18eb-4cf9-581d-9cb22a55ef00.webp "Save and Deploy")
 
-6. Once successfully deployed, navigate to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ***https://contact-form-43i.pages.dev***.
+6. Once successfully deployed, navigate to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ```https://contact-form-43i.pages.dev```

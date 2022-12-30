@@ -5,7 +5,7 @@ import { isEmpty, isValidEmail } from '#src/helpers/validate';
 const _initialize = {
     eventType: '_initialize',
     listener: (request, response, env) => {
-        let state = response.state = (Object.getOwnPropertyNames(request.state).length > 0) ? request.state : new FormState();
+        let state = response.state = (Object.getOwnPropertyNames(response.state).length > 0) ? response.state : new FormState();
         let envShowAlert = env.CONTACT_FORM_SHOW_ALERT;
         state.showAlert = (!envShowAlert || envShowAlert.trim().toLowerCase() === 'true')
         response.model = new FormModel(response.state);

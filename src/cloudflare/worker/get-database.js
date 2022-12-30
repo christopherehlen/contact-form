@@ -1,26 +1,26 @@
-import { ResponseHeaders } from '#src/helpers/cors';
+import { responseHeaders } from '#src/helpers/cors';
 
 let getDatabase = {
     method: 'GET', path: '/contact-message',
     handler: async (request, env, context) => {
-        await wait(750);
-        return new Response(JSON.stringify({ successful: true, objectId: 'FAKE_DATABASE_ID' }), { status: 200, headers: (new ResponseHeaders(env)).get('application/json') });
+        let origin = request.headers.get('origin');
+        let allowOrigin = env.ALLOW_ORIGIN;
         let { NOTION_TOKEN, NOTION_VERSION, PAGE_NAME, DATABASE_NAME } = env;
         let page = await getNotionObject(NOTION_TOKEN, NOTION_VERSION, 'page', PAGE_NAME);
         if (!page.successful) {
-            return new Response(JSON.stringify(page), { status: 200, headers: (new ResponseHeaders(env)).get('application/json') });
+            return new Response(JSON.stringify(page), { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });
         }
         let database = await getNotionObject(NOTION_TOKEN, NOTION_VERSION, 'database', DATABASE_NAME, page.objectId);
         if (database.successful && database.objectId) {
             database.objectId = database.objectId.replaceAll('-', '');
-            return new Response(JSON.stringify(database), { status: 200, headers: (new ResponseHeaders(env)).get('application/json') });
+            return new Response(JSON.stringify(database), { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });
         }
         database = await createDatabase(NOTION_TOKEN, NOTION_VERSION, DATABASE_NAME, page.objectId);
         database.objectId = (database.objectId) ? database.objectId.replaceAll('-', '') : null;
         if(await databaseReady(NOTION_TOKEN, NOTION_VERSION, DATABASE_NAME, page.objectId)) {
-            return new Response(JSON.stringify(database), { status: 200, headers: (new ResponseHeaders(env)).get('application/json') });
+            return new Response(JSON.stringify(database), { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });
         }
-        return new Response(JSON.stringify({ successful: false, objectId: null }), { status: 200, headers: (new ResponseHeaders(env)).get('application/json') });
+        return new Response(JSON.stringify({ successful: false, objectId: null }), { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });
     }
 };
 
@@ -147,12 +147,6 @@ async function getObjectId(response, objectName, parentId) {
         return true;
     });
     return objectId;
-}
-
-async function wait(time) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(true), time);
-    });
 }
 
 export { getDatabase }

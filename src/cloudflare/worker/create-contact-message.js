@@ -1,4 +1,4 @@
-import { ResponseHeaders } from '#src/helpers/cors';
+import { responseHeaders } from '#src/helpers/cors';
 
 let createContactMessage = {
     method: 'POST', path: '/contact-message',
@@ -6,14 +6,13 @@ let createContactMessage = {
         let { NOTION_TOKEN, NOTION_VERSION } = env;
         let contactMessage = await request.json();
         let data = await createNotionPage(NOTION_TOKEN, NOTION_VERSION, contactMessage);
-        return new Response(data, { status: 200, headers: (new ResponseHeaders(env)).get('application/json') });
+        let origin = request.headers.get('origin');
+        let allowOrigin = env.ALLOW_ORIGIN;
+        return new Response(data, { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });
     }
 };
 
 async function createNotionPage(token, version, contactMessage) {
-    await wait(750);
-    let fail = `${contactMessage.subject}${contactMessage.subject}${contactMessage.email}${contactMessage.content}`.trim().toLowerCase().includes('fail');
-    return JSON.stringify({ successful: !fail });
     let response = await fetch('https://api.notion.com/v1/pages', {
         method: 'POST',
         headers: {
@@ -64,12 +63,6 @@ async function createNotionPage(token, version, contactMessage) {
         })
     });
     return JSON.stringify({ successful: response.ok });
-}
-
-async function wait(time) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(true), time);
-    });
 }
 
 export { createContactMessage }

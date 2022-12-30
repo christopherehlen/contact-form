@@ -27,7 +27,11 @@
 
 ![Verified](./images/7636ce3b-6d41-459f-cc87-a18ddc335f00.webp "Verified")
 
-5. Your **Subdomain** and **Account ID** are in the right pane. Save both the **Subdomain** and **Account ID** somewhere; you will need them to set the **Contact Form's** environment variables later.
+5. Navigate to Workers Overview page.
+
+![Workers Overview](./images/1965d0da-f248-48ff-641a-69af58b15c00.webp "Workers Overview")
+
+6. Your **Subdomain** and **Account ID** are in the right pane. Save both the **Subdomain** and **Account ID** somewhere; you will need them to set the **Contact Form's** environment variables later.
 
 ![Account ID](./images/a4691f04-dbe7-4380-2a0b-6414b656c400.webp "Account ID")
 
@@ -115,8 +119,8 @@
 
 5. Add the following environment variables.
     - Set **NODE_VERSION** to 16.13.1.
-    - Set **CLOUDFLARE_ACCOUNT_ID** to the **Account ID** saved in **Create Worker Subdomain** section **Step 4**.
-    - Set **CLOUDFLARE_API_TOKEN** to the **API Token** saved in **Create API Token** section **Step 4**.
+    - Set **CLOUDFLARE_ACCOUNT_ID** to the **Account ID** saved in **Create Worker Subdomain** section **Step 6**.
+    - Set **CLOUDFLARE_API_TOKEN** to the **API Token** saved in **Create API Token** section **Step 6**.
     - Set **SYS_ALLOW_ORIGIN** to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ***https://contact-form-43i.pages.dev***.
     - Set **SYS_BASE_URL** to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ***https://contact-form-43i.pages.dev***.
     - Set **SYS_BASE_API_URL** to the **Worker Subdomain** with a **contact-form** prefix saved in **Create Worker Subdomain** section **Step** 4, i.e., ***https://contact-form.blue-squirrel.workers.dev***.

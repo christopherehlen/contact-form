@@ -5,7 +5,7 @@ import { isEmpty, isValidEmail } from '#src/helpers/validate';
 const _initialize = {
     eventType: '_initialize',
     listener: (request, response, env) => {
-        let state = response.state = (Object.getOwnPropertyNames(request.state).length > 0) ? request.state : new FormState();
+        let state = response.state = (Object.getOwnPropertyNames(response.state).length > 0) ? response.state : new FormState();
         let envShowAlert = env.CONTACT_FORM_SHOW_ALERT;
         state.showAlert = (!envShowAlert || envShowAlert.trim().toLowerCase() === 'true')
         response.model = new FormModel(response.state);
@@ -104,20 +104,4 @@ const onSendFailure = {
     }
 };
 
-const onClearForm = {
-    eventType: 'onClearForm',
-    listener: (request, response, env) => {
-        let state = response.state;
-        state.subject = '';
-        state.name = '';
-        state.email = '';
-        state.message = '';
-        state.sendSuccessful = false;
-        state.sendFailed = false;
-        state.sendInProgress = false;
-        state.sendAttempts = 0;
-        response.model = new FormModel(state);
-    }
-};
-
-export { _initialize, _postInitialize, _onReady, _onFormChange, _onSend, onSendSuccessful, onSendFailure, onClearForm }
+export { _initialize, _postInitialize, _onReady, _onFormChange, _onSend, onSendSuccessful, onSendFailure }

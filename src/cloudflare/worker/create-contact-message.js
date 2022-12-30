@@ -13,6 +13,9 @@ let createContactMessage = {
 };
 
 async function createNotionPage(token, version, contactMessage) {
+    await wait(750);
+    let fail = `${contactMessage.subject}${contactMessage.subject}${contactMessage.email}${contactMessage.content}`.trim().toLowerCase().includes('fail');
+    return JSON.stringify({ successful: !fail });
     let response = await fetch('https://api.notion.com/v1/pages', {
         method: 'POST',
         headers: {
@@ -63,6 +66,12 @@ async function createNotionPage(token, version, contactMessage) {
         })
     });
     return JSON.stringify({ successful: response.ok });
+}
+
+async function wait(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(true), time);
+    });
 }
 
 export { createContactMessage }

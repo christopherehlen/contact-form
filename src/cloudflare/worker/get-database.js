@@ -5,6 +5,8 @@ let getDatabase = {
     handler: async (request, env, context) => {
         let origin = request.headers.get('origin');
         let allowOrigin = env.ALLOW_ORIGIN;
+        await wait(750);
+        return new Response(JSON.stringify({ successful: true, objectId: 'FAKE_DATABASE_ID' }), { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });
         let { NOTION_TOKEN, NOTION_VERSION, PAGE_NAME, DATABASE_NAME } = env;
         let page = await getNotionObject(NOTION_TOKEN, NOTION_VERSION, 'page', PAGE_NAME);
         if (!page.successful) {
@@ -147,6 +149,12 @@ async function getObjectId(response, objectName, parentId) {
         return true;
     });
     return objectId;
+}
+
+async function wait(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(true), time);
+    });
 }
 
 export { getDatabase }

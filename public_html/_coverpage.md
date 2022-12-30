@@ -8,5 +8,5 @@
 - Notion database for maximum flexibiliy
 - Zero cost for most sites
 
-[GitHub](https://github.com/christopherehlen)
+[GitHub](https://github.com/christopherehlen/contact-form)
 [Get Started](about.md)

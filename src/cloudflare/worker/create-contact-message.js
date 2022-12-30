@@ -1,4 +1,4 @@
-import { ResponseHeaders } from '#src/helpers/cors';
+import { responseHeaders } from '#src/helpers/cors';
 
 let createContactMessage = {
     method: 'POST', path: '/contact-message',
@@ -6,7 +6,9 @@ let createContactMessage = {
         let { NOTION_TOKEN, NOTION_VERSION } = env;
         let contactMessage = await request.json();
         let data = await createNotionPage(NOTION_TOKEN, NOTION_VERSION, contactMessage);
-        return new Response(data, { status: 200, headers: (new ResponseHeaders(env)).get('application/json') });
+        let origin = request.headers.get('origin');
+        let allowOrigin = env.ALLOW_ORIGIN;
+        return new Response(data, { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });
     }
 };
 

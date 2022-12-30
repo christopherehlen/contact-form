@@ -19,7 +19,11 @@ const _postInitialize = {
         (new GetDatabase(env)).call().then((httpResponse) => {
             if (httpResponse.data && httpResponse.data.successful) {
                 asyncEmitEvent('_onReady', { databaseId: httpResponse.data.objectId });
+            } else {
+                console.error('Unable to get database ID, please check Notion environment variables.');
             }
+        }).catch((error) => {
+            console.error('Unable to get database ID, please check Notion environment variables.');
         });
     }
 };

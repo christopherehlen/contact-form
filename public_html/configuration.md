@@ -24,8 +24,6 @@ The **npm run build**, **npm run watch** and **npm run deploy** scripts depend o
 
 **PREFIX_CSS_SELECTORS:** if the flag is true, prefix CSS selectors with a unique hash code.
 
-**GENERATE_PREVIEW_HTML:** if the flag is true, preview HTML file is generated.
-
 ## Contact Form
 
 The **Contact Form** widget executing in the browser depends on contact form variables.

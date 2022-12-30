@@ -1,4 +1,4 @@
-import { defalut, success, fail, invalid, disabled } from '#src/helpers/preview/states';
+import { simple, success, fail, invalid, disabled } from '#src/helpers/preview/states';
 import happyPath from '#src/helpers/preview/happy-path';
 import sadPath from '#src/helpers/preview/sad-path';
 import invalidInputPath from '#src/helpers/preview/invalid-input-path';
@@ -8,7 +8,7 @@ export default {
     filter: {},
     params: {},
     state: {
-        default: defalut,
+        default: simple,
         success: success,
         fail: fail,
         invalid: invalid,

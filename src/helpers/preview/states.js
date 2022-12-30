@@ -1,6 +1,6 @@
 import { FormState } from '#generated/models';
 
-const defalut = new FormState();
+const simple = new FormState();
 
 const success = new FormState();
 success.ready = true;
@@ -28,4 +28,4 @@ disabled.message = 'This message is being sent right now!';
 disabled.ready = true;
 disabled.sendInProgress = true;
 
-export { defalut, success, fail, invalid, disabled }
+export { simple, success, fail, invalid, disabled }

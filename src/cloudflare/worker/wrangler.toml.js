@@ -1,8 +1,8 @@
 export default function (toml, env) {
-    toml.vars.ALLOW_ORIGIN = env.ALLOW_ORIGIN;
-    toml.vars.NOTION_TOKEN = env.NOTION_TOKEN;
-    toml.vars.NOTION_VERSION = env.NOTION_VERSION;
-    toml.vars.PAGE_NAME = env.PAGE_NAME
-    toml.vars.DATABASE_NAME = env.DATABASE_NAME;
+    toml.vars._ALLOW_ORIGIN = env._ALLOW_ORIGIN;
+    toml.vars._NOTION_TOKEN = env._NOTION_TOKEN;
+    toml.vars._NOTION_VERSION = env._NOTION_VERSION;
+    toml.vars._PAGE_NAME = env._PAGE_NAME
+    toml.vars._DATABASE_NAME = env._DATABASE_NAME;
     return toml;
 };

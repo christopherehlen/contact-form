@@ -4,20 +4,20 @@ let getDatabase = {
     method: 'GET', path: '/contact-message',
     handler: async (request, env, context) => {
         let origin = request.headers.get('origin');
-        let allowOrigin = env.ALLOW_ORIGIN;
-        let { NOTION_TOKEN, NOTION_VERSION, PAGE_NAME, DATABASE_NAME } = env;
-        let page = await getNotionObject(NOTION_TOKEN, NOTION_VERSION, 'page', PAGE_NAME);
+        let allowOrigin = env._ALLOW_ORIGIN;
+        let { _NOTION_TOKEN, _NOTION_VERSION, _PAGE_NAME, _DATABASE_NAME } = env;
+        let page = await getNotionObject(_NOTION_TOKEN, _NOTION_VERSION, 'page', _PAGE_NAME);
         if (!page.successful) {
             return new Response(JSON.stringify(page), { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });
         }
-        let database = await getNotionObject(NOTION_TOKEN, NOTION_VERSION, 'database', DATABASE_NAME, page.objectId);
+        let database = await getNotionObject(_NOTION_TOKEN, _NOTION_VERSION, 'database', _DATABASE_NAME, page.objectId);
         if (database.successful && database.objectId) {
             database.objectId = database.objectId.replaceAll('-', '');
             return new Response(JSON.stringify(database), { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });
         }
-        database = await createDatabase(NOTION_TOKEN, NOTION_VERSION, DATABASE_NAME, page.objectId);
+        database = await createDatabase(_NOTION_TOKEN, _NOTION_VERSION, _DATABASE_NAME, page.objectId);
         database.objectId = (database.objectId) ? database.objectId.replaceAll('-', '') : null;
-        if(await databaseReady(NOTION_TOKEN, NOTION_VERSION, DATABASE_NAME, page.objectId)) {
+        if(await databaseReady(_NOTION_TOKEN, _NOTION_VERSION, _DATABASE_NAME, page.objectId)) {
             return new Response(JSON.stringify(database), { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });
         }
         return new Response(JSON.stringify({ successful: false, objectId: null }), { status: 200, headers: responseHeaders(origin, allowOrigin, 'application/json') });

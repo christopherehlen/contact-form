@@ -1,7 +1,7 @@
 [vars]
 # The following variables are assigned in wrangler.toml.js.
-ALLOW_ORIGIN = ""
-NOTION_TOKEN = ""
-NOTION_VERSION = ""
-PAGE_NAME = ""
-DATABASE_NAME = ""
+_ALLOW_ORIGIN = ""
+_NOTION_TOKEN = ""
+_NOTION_VERSION = ""
+_PAGE_NAME = ""
+_DATABASE_NAME = ""

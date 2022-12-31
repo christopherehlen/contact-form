@@ -48,23 +48,23 @@
 
 ![Template](./images/ea40debf-c2b0-4a81-27b3-f461a8526d00.webp "Template")
 
-3. Set **Include All...** for both **Account and Zone Resources**.
+4. Set **Include All...** for both **Account and Zone Resources**.
 
 ![Form](./images/e7a3f405-3649-48ba-18dd-959ae994d900.webp "Form")
 
-3. Click the **Continue to Summary** button.
+5. Click the **Continue to Summary** button.
 
 ![Token Summary](./images/6c73b135-6dd4-495e-18bd-2e70266fb600.webp "Token Summary")
 
-3. Click the **Create Token** button.
+6. Click the **Create Token** button.
 
 ![Create Token](./images/8b95aeb8-281b-4a74-5fe6-af8a93023200.webp "Create Token")
 
-4. Click the **Copy** button. Save the token somewhere; you will need it to set the **Contact Form's** environment variables later. **IMPORTANT!** this is the only time the API token will be visible to you; if you lose the token, you must create a new one.
+7. Click the **Copy** button. Save the token somewhere; you will need it to set the **Contact Form's** environment variables later. **IMPORTANT!** this is the only time the API token will be visible to you; if you lose the token, you must create a new one.
 
 ![Copy Token](./images/813d6f95-7ac9-4fcf-337e-33048efc3400.webp "Copy Token")
 
-5. Click back to My Profile.
+8. Click back to My Profile.
 
 ![My Profile](./images/1bf60bfd-0ae9-4fee-b1d4-ad364b539c00.webp "Verified")
 
@@ -120,10 +120,10 @@
 5. Add the following environment variables.
     - Set **NODE_VERSION** to 16.13.1.
     - Set **CLOUDFLARE_ACCOUNT_ID** to the **Account ID** saved in **Create Worker Subdomain** section **Step 6**.
-    - Set **CLOUDFLARE_API_TOKEN** to the **API Token** saved in **Create API Token** section **Step 6**.
+    - Set **CLOUDFLARE_API_TOKEN** to the **API Token** saved in **Create API Token** section **Step 7**.
     - Set **SYS_ALLOW_ORIGIN** to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ```https://contact-form-43i.pages.dev```
     - Set **SYS_BASE_URL** to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ```https://contact-form-43i.pages.dev```
-    - Set **SYS_BASE_API_URL** to the **Worker Subdomain** with a **contact-form** prefix saved in **Create Worker Subdomain** section **Step** 4, i.e., ```https://contact-form.blue-squirrel.workers.dev```
+    - Set **SYS_BASE_API_URL** to the **Worker Subdomain** with a **contact-form** prefix saved in **Create Worker Subdomain** section **Step** 6, i.e., ```https://contact-form.blue-squirrel.workers.dev```
     - Set **SYS_NOTION_TOKEN** to the **API Token** saved in **Generate a Notion Integration Token** section **Step 7**.
     - Set **SYS_PAGE_NAME** to the **Name** saved in **Create a Notion Page** section **Step 3**.
 

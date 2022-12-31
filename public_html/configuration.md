@@ -1,6 +1,6 @@
 # Environment Variables
 
-Environment variables configure most of the Contact Form's attributes and behavior. The .env, .env.local, and .env.prod files set most variables with some references to system environment variables, each prefixed with **SYS_**.
+Environment variables configure most of the Contact Form's attributes and behavior. The .env, .env.local, and .env.prod files set most variables with some references to system environment variables, each prefixed with **SYS_**. Variables prefixed with an _ are private and unavailable to browser scripts unless explicitly imported. Use private variables for sensitive data, such as tokens and secrets.
 
 ## Local Development
 

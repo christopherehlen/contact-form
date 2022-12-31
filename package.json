@@ -27,7 +27,7 @@
         "postdeploy": "npx wrangler publish --config ./cloudflare/worker/contact-form.toml"
     },
     "devDependencies": {
-        "@christopherehlen/atomic": "0.0.52",
+        "@christopherehlen/atomic": "0.0.53",
         "@rollup/plugin-commonjs": "^21.0.1",
         "@rollup/plugin-node-resolve": "^13.0.5",
         "@rollup/plugin-terser": "0.2.0",
@@ -42,7 +42,7 @@
         "marked": "4.2.4",
         "mime-types": "2.1.35",
         "nanoid": "4.0.0",
-        "organismjs": "0.0.11",
+        "organismjs": "0.0.12",
         "wrangler": "2.6.2"
     },
     "author": "",

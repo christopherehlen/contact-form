@@ -1,5 +1,5 @@
 import { FormModel, FormState } from '#generated/models';
-import { GetDatabase, CreateContactMessage } from '#generated/cloudflare/client';
+import { getDatabase, createContactMessage } from '#generated/cloudflare/client';
 import { isEmpty, isValidEmail } from '#src/helpers/validate';
 
 const _initialize = {
@@ -16,7 +16,7 @@ const _postInitialize = {
     eventType: '_postInitialize',
     listener: (request, response, env) => {
         let asyncEmitEvent = response.emitEvent;
-        (new GetDatabase(env)).call().then((httpResponse) => {
+        getDatabase().then((httpResponse) => {
             if (httpResponse.data && httpResponse.data.successful) {
                 asyncEmitEvent('_onReady', { databaseId: httpResponse.data.objectId });
             } else {
@@ -63,7 +63,7 @@ const _onSend = {
             isEmpty(state.message));
         if (state.sendInProgress) {
             let asyncEmitEvent = response.emitEvent;
-            (new CreateContactMessage(env)).call({
+            createContactMessage({
                 databaseId: state.databaseId,
                 subject: state.subject,
                 name: state.name,

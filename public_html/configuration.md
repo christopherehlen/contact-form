@@ -38,19 +38,19 @@ The **Contact Form** widget executing in the browser depends on contact form var
 
 Worker functions executing on the Cloudflare network depend on Cloudflare worker variables.
 
-**ALLOW_ORIGIN:** Access-Control-Allow-Origin HTTP header, this environment variable can have multiple origins defined, each separated by a comma. , i.e., ```https://contact-form-43i.pages.dev, https://christopherehlen.com```
+**_ALLOW_ORIGIN:** Access-Control-Allow-Origin HTTP header, this environment variable can have multiple origins defined, each separated by a comma. , i.e., ```https://contact-form-43i.pages.dev, https://christopherehlen.com```
 
 ## Notion
 
 Worker functions executing on the Cloudflare network depend on Notions variables to communicate with the Notion API.
 
-**NOTION_TOKEN:** token for Notion's RESTful API.
+**_NOTION_TOKEN:** token for Notion's RESTful API.
 
-**NOTION_VERSION:** version of Notion's RESTful API.
+**_NOTION_VERSION:** version of Notion's RESTful API.
 
-**PAGE_NAME:** name of Notion page containing contact form database.
+**_PAGE_NAME:** name of Notion page containing contact form database.
 
-**DATABASE_NAME:** contact form database name.
+**_DATABASE_NAME:** contact form database name.
 
 ## Changing Browser Variables
 

@@ -86,20 +86,20 @@ npm install
     1. Rename **.env.local.sample** to **.env.local**.
     2. Open the **.env.local** file in the project root directory.
     3. Uncomment the Notion variables.
-    4. Set **NOTION_TOKEN** to the API token generated in the **Generate a Notion Integration Token** section **Step 7**.
-    5. Set **NOTION_VERSION** to "2022-06-28".
-    6. Set **PAGE_NAME** to the page name created in the **Create a Notion Page** section **Step 3**.
-    7. Set **DATABASE_NAME** to "Contact Form".
+    4. Set **_NOTION_TOKEN** to the API token generated in the **Generate a Notion Integration Token** section **Step 7**.
+    5. Set **_NOTION_VERSION** to "2022-06-28".
+    6. Set **_PAGE_NAME** to the page name created in the **Create a Notion Page** section **Step 3**.
+    7. Set **_DATABASE_NAME** to "Contact Form".
 
 ```bash
 ###
 # Notion variables
 #
 ##
-NOTION_TOKEN = secret_GfjiEQSIFlfj1idoiajd
-NOTION_VERSION = 2022-06-28
-PAGE_NAME = Online Forms
-DATABASE_NAME = Contact Form
+_NOTION_TOKEN = secret_GfjiEQSIFlfj1idoiajd
+_NOTION_VERSION = 2022-06-28
+_PAGE_NAME = Online Forms
+_DATABASE_NAME = Contact Form
 ```
 
 5. Build contact-form.

@@ -1,6 +1,6 @@
 ## Using Contact Form
 
-- Add the domain of the page displaying the **Contact Form** widget to the **ALLOW_ORIGIN** environment variable; otherwise, you may get the following CORS error.
+- Add the domain of the page displaying the **Contact Form** widget to the **_ALLOW_ORIGIN** environment variable; otherwise, you may get the following CORS error.
     ```
     Cross-Origin Request Blocked: The Same Origin Policy disallows
     reading the remote resource at https://some-url-here. (Reason:
@@ -8,7 +8,7 @@
     ```
 
     For details refer to:
-    - **Configuration** -> **Cloudflare Worker** -> **ALLOW_ORIGIN**.
+    - **Configuration** -> **Cloudflare Worker** -> **_ALLOW_ORIGIN**.
     - **Cloudflare Deployment** -> **Setup Build** -> **Step 5**.
 
 - Include the external **organism.js** script.

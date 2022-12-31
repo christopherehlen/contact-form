@@ -72,6 +72,8 @@ Complete example if served from localhost.
 
 ## JavaScript API
 
+### contact-form.js
+
 **contact_form.FormState:** contact form state.
 ```js
 class FormState {
@@ -149,6 +151,38 @@ class RenderOptions {
 
 ```js
 function render(elementId, widget, options) {...}
+```
+
+### contact-form-client.js
+
+**contact_form_api.CreateContactMessage:** class that creates contact form message in Notion.
+
+```js
+class CreateContactMessage {
+    constructor(env) {...}
+    call(body, query, headers) {...}
+}
+```
+
+**contact_form_api.createContactMessage:** function that creates contact form message in Notion.
+
+```js
+function createContactMessage(body, query, headers) {...}
+```
+
+**contact_form_api.GetDatabase:** class that gets contact form database id from Notion.
+
+```js
+class GetDatabase {
+    constructor(env) {...}
+    call(query, headers) {...}
+}
+```
+
+**contact_form_api.getDatabase:** function that gets contact form database id from Notion.
+
+```js
+function getDatabase(query, headers) {...}
 ```
 
 ## Events

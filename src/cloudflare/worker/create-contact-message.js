@@ -1,7 +1,8 @@
 import { responseHeaders } from '#src/helpers/cors';
 
 let createContactMessage = {
-    method: 'POST', path: '/contact-message',
+    method: 'POST',
+    path: '/contact-message',
     handler: async (request, env, context) => {
         let { _NOTION_TOKEN, _NOTION_VERSION } = env;
         let contactMessage = await request.json();

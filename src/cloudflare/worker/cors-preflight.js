@@ -1,7 +1,8 @@
 import { responseHeaders } from '#src/helpers/cors';
 
 let corsPreflight = {
-    method: 'OPTIONS', path: '/contact-message/*',
+    method: 'OPTIONS',
+    path: '/contact-message/*',
     handler: (request, env, context) => {
         let origin = request.headers.get('origin');
         let allowOrigin = env._ALLOW_ORIGIN;

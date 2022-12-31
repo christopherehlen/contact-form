@@ -1,7 +1,8 @@
 import { responseHeaders } from '#src/helpers/cors';
 
 let getDatabase = {
-    method: 'GET', path: '/contact-message',
+    method: 'GET',
+    path: '/contact-message',
     handler: async (request, env, context) => {
         let origin = request.headers.get('origin');
         let allowOrigin = env._ALLOW_ORIGIN;

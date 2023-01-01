@@ -2,11 +2,11 @@
 
 1. Log in to <a href="https://www.github.com/" target="_blank">**GitHub**</a>.
 2. Navigate to <a href="https://github.com/christopherehlen/contact-form" target="_blank">**github.com/christopherehlen/contact-form**</a> repository.
-2. In the upper right corner, click the **Fork** button.
+3. In the upper right corner, click the **Fork** button.
 
 ![Fork](./images/9e0e3fd4-4ceb-4088-b492-72ff5ca25a00.webp "Fork")
 
-2. Click the **Create fork** button.
+4. Click the **Create fork** button.
 
 ![Create Fork](./images/1d9e7ae9-83ef-4ef1-51e6-2ebed8475500.webp "Create Fork")
 

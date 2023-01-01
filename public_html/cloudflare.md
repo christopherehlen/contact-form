@@ -133,8 +133,8 @@
 
 ![Save and Deploy](./images/968a1abb-18eb-4cf9-581d-9cb22a55ef00.webp "Save and Deploy")
 
-### IMPORTANT READ BEFORE CONTINUING ON TO STEP 6!
+### IMPORTANT READ BEFORE CONTINUING ON TO STEP 7!
 
 The **Contact Form** database will be created the first time a **Contact Form** is rendered; this will take 15-60 seconds, and during this time, the form will be disabled. Wait to reload the page until this process has completed.
 
-6. Once successfully deployed, navigate to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ```https://contact-form-43i.pages.dev```
+7. Once successfully deployed, navigate to the **Domain Name** saved in **Setup Build** section **Step 1** i.e., ```https://contact-form-43i.pages.dev```

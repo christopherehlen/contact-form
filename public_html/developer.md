@@ -153,6 +153,34 @@ class RenderOptions {
 function render(elementId, widget, options) {...}
 ```
 
+***Example***
+
+```html
+<body>
+    <div id='put-it-here'></div>
+    <script>
+        // Setup initial state, optional step.
+        let initialState = new contact_form.FormState();
+        initialState.subject = 'Example Subject';
+        initialState.name = 'Joe Smith';
+        initialState.email = 'email@jsmith.com';
+        initialState.message = 'Example message';
+
+        // Setup widget view model, optional step.
+        let widgetModel = new contact_form.Widget();
+        widgetModel.state = initialState;
+        widgetModel.model = new contact_form.FormModel(initialState);
+
+        // Setup reder options, optional step.
+        let options = new contact_form.RenderOptions();
+        options.style.backgroundColor = 'red';
+
+        // Render Contact Form.
+        contact_form.render('put-it-here', widgetModel, options);
+    </script>
+</body>
+```
+
 ### contact-form-client.js
 
 **contact_form_api.CreateContactMessage:** class that creates contact form message in Notion.
@@ -160,14 +188,56 @@ function render(elementId, widget, options) {...}
 ```js
 class CreateContactMessage {
     constructor(env) {...}
-    call(body, query, headers) {...}
+    call(message, query, headers) {...}
 }
+```
+
+***Example***
+
+```js
+let env ={
+    BASE_API_URL: 'http://localhost:8787/'
+};
+
+let message = {
+    databaseId: 'Notion database id.',
+    subject: 'Example Subject',
+    name: 'Joe Smith',
+    email: 'email@jsmith.com',
+    content: 'Example message'
+};
+
+(new contact_form_api.CreateContactMessage(env)).call(message)
+    .then((httpResponse) => {
+        let { successful } = httpResponse.data;
+    }).catch((error) => {
+        ...
+    });
 ```
 
 **contact_form_api.createContactMessage:** function that creates contact form message in Notion.
 
 ```js
-function createContactMessage(body, query, headers) {...}
+function createContactMessage(message, query, headers) {...}
+```
+
+***Example***
+
+```js
+let message = {
+    databaseId: 'Notion database id.',
+    subject: 'Example Subject',
+    name: 'Joe Smith',
+    email: 'email@jsmith.com',
+    content: 'Example message'
+};
+
+contact_form_api.createContactMessage(message)
+    .then((httpResponse) => {
+        let { successful } = httpResponse.data;
+    }).catch((error) => {
+        ...
+    });
 ```
 
 **contact_form_api.GetDatabase:** class that gets contact form database id from Notion.
@@ -179,10 +249,36 @@ class GetDatabase {
 }
 ```
 
+***Example***
+
+```js
+let env ={
+    BASE_API_URL: 'http://localhost:8787/'
+};
+
+(new contact_form_api.GetDatabase(env)).call()
+    .then((httpResponse) => {
+        let { successful, objectId } = httpResponse.data;
+    }).catch((error) => {
+        ...
+    });
+```
+
 **contact_form_api.getDatabase:** function that gets contact form database id from Notion.
 
 ```js
 function getDatabase(query, headers) {...}
+```
+
+***Example***
+
+```js
+contact_form_api.getDatabase()
+    .then((httpResponse) => {
+        let { successful, objectId } = httpResponse.data;
+    }).catch((error) => {
+        ...
+    });
 ```
 
 ## Events

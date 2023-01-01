@@ -12,6 +12,8 @@
 
 ## Create Worker Subdomain
 
+**You will only have to complete this step the first time you create a worker for this account.**
+
 1. Log in to <a href="https://www.cloudflare.com/" target="_blank">**Cloudflare**</a>.
 2. In the left pane, click the **Workers** option.
 

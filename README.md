@@ -1,4 +1,6 @@
 # contact-form
+
+Detailed documentation can be found at <a href="https://christopherehlen.com/organisms/contact-form" target="_blank">https://christopherehlen.com/organisms/contact-form</a>
  
 1. Clone the **Contact Form** repository.
 

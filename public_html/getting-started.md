@@ -54,7 +54,7 @@
 
 ![Add Connection](./images/e1e55823-c1ce-4862-aa40-df32e64afe00.webp "Add Connection")
 
-3. In the submenu, click the name of the connection created in the Generate a Notion Integration Token step. Sometimes there is a delay between completing the connection and when it is available. If the connection name is not there, wait a minute or two and try again.
+3. In the submenu, click the name of the connection created in the **Generate a Notion Integration Token** step. Sometimes there is a delay between completing the connection and when it is available. If the connection name is not there, wait a minute or two and try again.
 
 ![Select Connection](./images/08f9d1a2-0ec9-41c4-dcb1-af0f7bb0e700.webp "Select Connection")
 
